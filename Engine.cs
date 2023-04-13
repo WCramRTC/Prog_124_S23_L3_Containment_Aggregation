@@ -15,6 +15,20 @@ namespace Prog_124_S23_L3_Containment_Aggregation
             _hp = hp;
         }
 
-        public int Hp { get => _hp; set => _hp = value; }
+        public int Hp { get => _hp; 
+        
+            set
+            {
+                if(value >= 50)
+                {
+                    _hp = value;
+                }
+                else
+                {
+                    throw new Exception("Please enter a valid Horse Power");
+                }
+            }
+        
+        }
     }
 }

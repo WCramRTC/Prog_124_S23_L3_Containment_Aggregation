@@ -21,6 +21,19 @@ namespace Prog_124_S23_L3_Containment_Aggregation
             _suspension = suspension;
         }
 
+        public void SwapEngine(Engine engine)
+        {
+            if(engine != null)
+            {
+                _engine = engine;
+            }
+            
+        }
+        public void SwapEngine(int hp)
+        {
+            _engine = new Engine(hp);
+        }
+
         public override string ToString()
         {
             return $"{_make} {_model} : {_engine.Hp} :\n" +
